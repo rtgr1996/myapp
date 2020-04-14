@@ -23,3 +23,5 @@ Things you may want to cover:
 
 * ...
 The front-end: Creating articlesmyapp
+
+finger print: SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
