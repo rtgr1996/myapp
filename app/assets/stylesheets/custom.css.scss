@@ -23,6 +23,10 @@ $navbar-default-bg: black;
   margin-top: 25px;
 }
 
+.dropdown-menu.show {
+    display: grid;
+}
+
 .jumbotron {
   background-image: asset-url('jumbo-copy.jpg');
   background-position: center center;
