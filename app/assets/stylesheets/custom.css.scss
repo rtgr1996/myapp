@@ -22,7 +22,15 @@ $navbar-default-bg: black;
 #home-container {
   margin-top: 25px;
 }
-
+.badge{
+  background-color: #CEF6F5;
+  text-transform: uppercase;
+  letter-spacing: -1px;;
+  font-weight: bold:
+}
+.input_checkbox input {
+  width: auto !important;
+}
 .dropdown-menu.show {
     display: grid;
 }

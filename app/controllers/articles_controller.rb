@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 		@articles = Article.paginate(page: params[:page], per_page: 5)
 	end
 	def show
-		
+
 	end
 	def new
 		@article = Article.new
@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
 	end
 	def update
 		
-		if @article.update(post_params)
+		if @article.update(article_params)
 			flash[:notice] = "Article was updated successfully."
 			redirect_to @article
 		else
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 	end
 	def create
 		#render plain: params[:article].inspect
-		@article = Article.new(post_params)
+		@article = Article.new(article_params)
 		@article.user = current_user
 		if @article.save
 			flash[:notice] = "Article was created successfully."
@@ -43,8 +43,8 @@ class ArticlesController < ApplicationController
 	def set_article
 		@article=Article.find(params[:id])
 	end
-	def post_params
-		params.require(:article).permit(:title,:description)
+	def article_params
+		params.require(:article).permit(:title,:description, category_ids: [])
 	end
 	def require_same_user
 		if current_user != @article.user
